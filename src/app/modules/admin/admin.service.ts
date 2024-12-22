@@ -4,9 +4,7 @@ import httpStatus from 'http-status';
 import { Blog } from '../blog/blog.model';
 
 const blockUser = async (userId: string) => {
-  console.log(userId);
   const user = await User.findById(userId);
-  console.log(user);
 
   if (!user) {
     throw new AppError(httpStatus.NOT_FOUND, 'User not found');

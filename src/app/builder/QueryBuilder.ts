@@ -36,7 +36,6 @@ class QueryBuilder<T> {
   }
 
   filter() {
-    console.log(this.query.filter);
     if (this.query.filter) {
       const author = this.query.filter as string;
 
